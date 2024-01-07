@@ -12,12 +12,12 @@ def split_from_arg(string, separateur):
         print("string not in string boi")
         exit()
     tableau.extend([string[:index_separateur], string[index_separateur + len(separateur):]])
-    return tableau
+    return [i for i in tableau if i]
 
 
 # Part 2 : Error Handling
 
-if not len(sys.argv) == 3:
+if not len(sys.argv) == 3 or sys.argv[1] == sys.argv[2]:
     print("erreur")
     exit()
 
