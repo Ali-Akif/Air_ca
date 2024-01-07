@@ -6,13 +6,13 @@ import sys
 # Part 1 : Function
 
 def split_from_wish(string_to_cut, string_splitter):
+    splitter_indice = [i for i, char in enumerate(string_to_cut) if char in string_splitter]
     splitted_string = []
-    curseur = 0
-    for i in range(len(string_to_cut)):
-        if string_to_cut[i] in string_splitter:
-            splitted_string.append(string_to_cut[curseur:i])
-            curseur = i + 1
-    splitted_string.append(string_to_cut[curseur:])
+    cursor = 0
+    for i in splitter_indice:
+        splitted_string.append(string_to_cut[cursor:i])
+        cursor = i + 1
+    splitted_string.append(string_to_cut[cursor:])
     return [string for string in splitted_string if string]
 
 # Part 2 : Error Handling
