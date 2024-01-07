@@ -16,8 +16,8 @@ result = ""
 
 # Part 3 : Resolution
 
-for i, char in enumerate(given_string):
-    if (i == len(given_string) - 1 and char != result[-1]) or char != given_string[i + 1]:
+for char in given_string:
+    if not result or char != result[-1]:
         result += char
 
 
