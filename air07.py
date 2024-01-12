@@ -12,7 +12,7 @@ def insertion_in_sorted_array(int_array, to_add_int):
         if not inserted and to_add_int < value:
             result.append(to_add_int)
             inserted = True
-        result.append(str(value))
+        result.append(value)
 
     if not inserted:
         result.append(to_add_int)
