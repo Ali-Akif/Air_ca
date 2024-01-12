@@ -16,7 +16,7 @@ def quicksort(array):
 
 # Part 2 : Error Handling
 
-if not (len(sys.argv) > 2 and "".join(sys.argv[1:]).isdigit()):
+if not (len(sys.argv) > 1 and "".join(sys.argv[1:]).replace("+", "").replace("-", "").isdigit()):
     print("erreur")
     exit()
 
