@@ -24,7 +24,7 @@ def insertion_in_sorted_array(int_array, to_add_int):
 
 if len(sys.argv) < 3 and not "".join(sys.argv[1:]).isdigit():
     print("erreur")
-    exit()
+    sys.exit(1)
 
 
 
