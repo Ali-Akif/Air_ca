@@ -10,7 +10,7 @@ def split_from_arg(string, separateur):
     index_separateur = string.find(separateur)
     if index_separateur == -1:
         print("string not in string boi")
-        exit()
+        sys.exit(1)
     tableau.extend([string[:index_separateur], string[index_separateur + len(separateur):]])
     return [i for i in tableau if i]
 
@@ -19,7 +19,7 @@ def split_from_arg(string, separateur):
 
 if not len(sys.argv) == 3 or sys.argv[1] == sys.argv[2]:
     print("erreur")
-    exit()
+    sys.exit(1)
 
 
 # Part 3 : Slicing

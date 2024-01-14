@@ -7,7 +7,7 @@ import sys
 
 if not (len(sys.argv) == 3 and len(sys.argv[1]) == 1 and sys.argv[2].isdigit()):
     print("erreur")
-    exit()
+    sys.exit(1)
 
 
 # Part 2 : Slicing

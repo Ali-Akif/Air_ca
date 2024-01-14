@@ -7,7 +7,7 @@ import sys
 
 if len(sys.argv) < 4:
     print("erreur")
-    exit()
+    sys.exit(1)
 
 
 # Part 2 : Slicing

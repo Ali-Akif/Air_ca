@@ -28,7 +28,7 @@ terminal_arg = sys.argv[1:]
 
 if not( "fusion" in terminal_arg and "".join(terminal_arg).replace("fusion", "").isdigit() ):
     print('error : enter arg in format : "sorted array" fusion "sorted array"')
-    exit()
+    sys.exit(1)
 
 index_fusion = terminal_arg.index("fusion")
 array1 = terminal_arg[:index_fusion]
@@ -36,7 +36,7 @@ array2 = terminal_arg[index_fusion + 1:]
 
 if not (is_sorted(array1) and is_sorted(array2)): #Hard to put it on the same line as the other without using a try except )
     print("error : array not sorted")
-    exit()
+    sys.exit(1)
 
 
 # Part 3 : Resolution and Display

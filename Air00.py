@@ -19,7 +19,7 @@ def split_from_wish(string_to_cut, delimiters):
 
 if len(sys.argv) != 2:
     print("erreur")
-    exit()
+    sys.exit(1)
 
 
 # Part 3 : Slicing

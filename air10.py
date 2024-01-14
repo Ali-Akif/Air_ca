@@ -22,5 +22,7 @@ try:
         print(file.read())
 except FileNotFoundError:
     print("Erreur : Le fichier spécifié n'as pas été trouvé.")
+    sys.exit(1)
 except PermissionError:
     print("Erreur : Permission refuséee pour ouvrir le fichier.")
+    sys.exit(1)

@@ -16,7 +16,7 @@ def join_from_wish(array, joiner):
     
 if len(sys.argv) < 2:
     print("erreur")
-    exit()
+    sys.exit(1)
 
 
 # Part 3 : Slicing and Resolution

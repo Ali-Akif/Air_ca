@@ -13,7 +13,7 @@ def lrotate(array):
 
 if len(sys.argv) < 3:
     print("erreur")
-    exit()
+    sys.exit(1)
 
 
 # Part 3 : Resolution and Display

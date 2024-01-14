@@ -6,7 +6,7 @@ import sys
 
 if len(sys.argv) < 3 or not "".join(sys.argv[1:]).replace("+", "").replace("-","").isdigit() or len(sys.argv[-1]) != 2:
     print("erreur")
-    exit()
+    sys.exit(1)
 
 
 # Part 2 : Slicing

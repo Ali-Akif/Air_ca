@@ -18,7 +18,7 @@ def quicksort(array):
 
 if not (len(sys.argv) > 1 and "".join(sys.argv[1:]).replace("+", "").replace("-", "").isdigit()):
     print("erreur")
-    exit()
+    sys.exit(1)
 
 
 # Part 3 : Slicing
