@@ -10,7 +10,7 @@ def print_colored(text, color):
 
 def run_test(file_name, args=[]):
     commande = ["python", file_name] + args
-    return subprocess.call(commande, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL) == 0
+    return subprocess.call(commande, stdout = subprocess.DEVNULL, stderr=subprocess.DEVNULL) == 0
 
 
 
@@ -27,7 +27,7 @@ tests = {
     "air07.py": [["1", "3", "2"], ["5", "5"], ["b", "j"]],   
     "air08.py": [["10", "fusion", "20"], ["5", "6", "fusion", "2", "8"], ["prout"]],   
     "air09.py": [["Michel", "Albert"], ["Bernard", "Avdul"], ["prout"]],  
-    "air10.py": [["air12.py"], ["air00.py"], ["uh"]],   
+    "air10.py": [["air12.py"], ["air01.py"], ["uh"]],   
     "air11.py": [["0", "5"], ["$", "20"], ["uh"]],   
     "air12.py": [["1","2","3","5"], ["5","4","3","2"], ["nuhu"]],   
 }
