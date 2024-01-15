@@ -2,39 +2,22 @@
 
 import sys
 
-
-# Part 1 : Function
-
-def insertion_in_sorted_array(int_array, to_add_int):
+def insertion_in_sorted_array(array):
+    array = [int(value) for value in array]
+    to_add = array.pop()
     result = []
     inserted = False
-    for value in int_array:
-        if not inserted and to_add_int < value:
-            result.append(to_add_int)
+    for value in array:
+        if not inserted and to_add < value:
+            result.append(to_add)
             inserted = True
         result.append(value)
-
     if not inserted:
-        result.append(to_add_int)
-    
-    return result
+        result.append(to_add)
+    return ", ".join([str(n) for n in result])
 
-
-# Part 2 : Error Handling
-
-if len(sys.argv) < 3 and not "".join(sys.argv[1:]).isdigit():
+if len(sys.argv) < 3 or not "".join(sys.argv[1:]).isdigit():
     print("erreur")
     sys.exit(1)
 
-
-
-# Part 3 : Slicing
-
-int_array = [int(value) for value in sys.argv[1:]]
-to_add_int = int_array.pop()
-final_result = [ str(n) for n in insertion_in_sorted_array(int_array,to_add_int)]
-
-
-# Part 4 : Display
-
-print(", ".join(final_result))
+print(insertion_in_sorted_array(sys.argv[1:]))

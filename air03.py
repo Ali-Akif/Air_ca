@@ -2,11 +2,13 @@
 
 import sys
 
-def find_intruder(liste):
+def find_intruder(array):
     impostor = []
-    for object in liste:
-        if liste.count(object) == 1:
+
+    for object in array:
+        if array.count(object) == 1:
             impostor.append(object)
+            
     if impostor:
         if len(impostor) > 1:
             for i, word in enumerate(impostor):
@@ -17,7 +19,7 @@ def find_intruder(liste):
         print("not found")
 
 if len(sys.argv) < 4:
-    print("erreur")
+    print("error")
     sys.exit(1)
 
 find_intruder(sys.argv[1:])

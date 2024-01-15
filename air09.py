@@ -2,23 +2,11 @@
 
 import sys
 
-
-# Part 1 : Function
-
 def lrotate(array):
-    return array[1:] + array[:1]
-
-
-# Part 2 : Error Handling
+    return ", ".join(array[1:] + array[:1])
 
 if len(sys.argv) < 3:
     print("erreur")
     sys.exit(1)
 
-
-# Part 3 : Resolution and Display
-    
-args = sys.argv[1:]
-result = ", ".join(lrotate(args))
-
-print(result)
+print(lrotate(sys.argv[1:]))

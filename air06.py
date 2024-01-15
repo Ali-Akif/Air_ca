@@ -2,35 +2,20 @@
 
 import sys
 
-
-# Part 1 : Function
-
-def return_only_approved_one(to_test, approver):
-    approved = []
-    for i in to_test:
+def whos_not_approved(array):
+    not_approved = []
+    approver = array.pop()
+    to_test = array
+    for i in array:
         if approver not in i:
-            approved.append(i)
-    return approved
-
-
-# Part 2 : Error Handling
+            not_approved.append(i)
+    if not_approved:
+        return ", ".join(not_approved)
+    else:
+        return "Nothing to see here buddy"
 
 if len(sys.argv) < 3:
     print("erreur")
     sys.exit(1)
 
-
-# Part 3 : Slicing
-
-to_test = sys.argv[1:-1]
-testor = sys.argv[-1]
-final = return_only_approved_one(to_test,testor)
-
-
-# Part 4 : Display
-
-if final:
-    print(", ".join(final))
-else:
-    print("Nothing to see here buddy")
-
+print(whos_not_approved(sys.argv[1:]))

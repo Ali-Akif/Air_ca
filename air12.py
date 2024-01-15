@@ -2,9 +2,6 @@
 
 import sys
 
-
-# Part 1 : Function
-
 def quicksort(array):
     if len(array) <= 1:
         return array
@@ -14,16 +11,12 @@ def quicksort(array):
         right = [x for x in array[1:] if x >= pivot]
         return quicksort(left) + [pivot] + quicksort(right)
 
-# Part 2 : Error Handling
-
 if not (len(sys.argv) > 1 and "".join(sys.argv[1:]).replace("+", "").replace("-", "").isdigit()):
     print("erreur")
     sys.exit(1)
-
-
-# Part 3 : Slicing
-    
-arr = [int(n) for n in sys.argv[1:]]
+ 
+arr = [int(n) for n in sys.argv[1:]] # Plus efficace de les mettres hors de la fonction bg de Cyril
 result = map(str, quicksort(arr))
+
 print(", ".join(result))
 
